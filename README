@@ -1,0 +1,5 @@
+Project bundling up all projects related to the OpenEngSB and helping running the entire framework.
+In other words this is a server bundle containing the karaf base server, extended by openengsb-framework, 
+and all openengsb-domains, openengsb-connectors, openengsb-ports, openengsb-features, ... which are 
+all configured to start at system-startup
+
