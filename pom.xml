@@ -29,7 +29,7 @@
     <domain.appointment.version>1.2.0</domain.appointment.version>
     <domain.build.version>1.2.0</domain.build.version>
     <domain.contact.version>1.2.0</domain.contact.version>
-    <domain.deploy.version>1.2.0-SNAPSHOT</domain.deploy.version>
+    <domain.deploy.version>1.2.0</domain.deploy.version>
     <domain.issue.version>1.2.0-SNAPSHOT</domain.issue.version>
     <domain.notification.version>1.2.0-SNAPSHOT</domain.notification.version>
     <domain.report.version>1.2.0-SNAPSHOT</domain.report.version>
