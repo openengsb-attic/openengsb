@@ -39,7 +39,6 @@
     <connector.gcalendar.version>1.2.0</connector.gcalendar.version>
     <connector.gcontacts.version>1.2.0</connector.gcontacts.version>
     <connector.git.version>1.2.0</connector.git.version>
-    <connector.jira.version>1.2.0-SNAPSHOT</connector.jira.version>
     <connector.maven.version>1.2.0-SNAPSHOT</connector.maven.version>
     <connector.plaintextreport.version>1.2.0-SNAPSHOT</connector.plaintextreport.version>
     <connector.promreport.version>1.2.0-SNAPSHOT</connector.promreport.version>
@@ -254,13 +253,6 @@
     </dependency>
     <dependency>
       <groupId>org.openengsb.connector</groupId>
-      <artifactId>openengsb-connector-jira</artifactId>
-      <type>xml</type>
-      <classifier>features</classifier>
-      <version>${connector.jira.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.openengsb.connector</groupId>
       <artifactId>openengsb-connector-maven</artifactId>
       <type>xml</type>
       <classifier>features</classifier>
@@ -426,7 +418,6 @@
                 <descriptor>mvn:org.openengsb.connector/openengsb-connector-gcalendar/${connector.gcalendar.version}/xml/features</descriptor>
                 <descriptor>mvn:org.openengsb.connector/openengsb-connector-gcontacts/${connector.gcontacts.version}/xml/features</descriptor>
                 <descriptor>mvn:org.openengsb.connector/openengsb-connector-git/${connector.git.version}/xml/features</descriptor>
-                <descriptor>mvn:org.openengsb.connector/openengsb-connector-jira/${connector.jira.version}/xml/features</descriptor>
                 <descriptor>mvn:org.openengsb.connector/openengsb-connector-maven/${connector.maven.version}/xml/features</descriptor>
                 <descriptor>mvn:org.openengsb.connector/openengsb-connector-plaintextreport/${connector.plaintextreport.version}/xml/features</descriptor>
                 <descriptor>mvn:org.openengsb.connector/openengsb-connector-promreport/${connector.promreport.version}/xml/features</descriptor>
@@ -453,7 +444,6 @@
                 <feature>openengsb-connector-gcalendar</feature>
                 <feature>openengsb-connector-gcontacts</feature>
                 <feature>openengsb-connector-git</feature>
-                <feature>openengsb-connector-jira</feature>
                 <feature>openengsb-connector-maven</feature>
                 <feature>openengsb-connector-plaintextreport</feature>
                 <feature>openengsb-connector-promreport</feature>
