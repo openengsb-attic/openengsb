@@ -41,7 +41,7 @@
     <connector.git.version>1.2.0</connector.git.version>
     <connector.maven.version>1.2.0</connector.maven.version>
     <connector.plaintextreport.version>1.2.0</connector.plaintextreport.version>
-    <connector.promreport.version>1.2.0-SNAPSHOT</connector.promreport.version>
+    <connector.promreport.version>1.2.0</connector.promreport.version>
     <connector.trac.version>1.2.0-SNAPSHOT</connector.trac.version>
   </properties>
 
