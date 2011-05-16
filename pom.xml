@@ -42,7 +42,8 @@
     <connector.maven.version>1.2.0</connector.maven.version>
     <connector.plaintextreport.version>1.2.0</connector.plaintextreport.version>
     <connector.promreport.version>1.2.0</connector.promreport.version>
-    <connector.trac.version>1.2.0</connector.trac.version>
+    <connector.trac.version>1.2.1</connector.trac.version>
+    <connector.github.version>1.2.0</connector.github.version>
   </properties>
 
   <parent>
@@ -278,6 +279,13 @@
       <type>xml</type>
       <classifier>features</classifier>
       <version>${connector.trac.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.openengsb.connector</groupId>
+      <artifactId>openengsb-connector-github</artifactId>
+      <type>xml</type>
+      <classifier>features</classifier>
+      <version>${connector.github.version}</version>
     </dependency>
   </dependencies>
 
