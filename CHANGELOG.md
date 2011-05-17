@@ -1,3 +1,22 @@
+openengsb-bundle-1.2.0.RC2_1 2011-05-17
+-----------------------------------------
+
+Upgrade karaf, openengsb-root and include the latest openengsb-framework. In addition introduce github connector and minor upgrades/fixes to issue domain and git, maven and trac connector.
+
+** Library Upgrade
+    * [OPENENGSB-1488] - Upgrade openengsb-framework to 1.2.0.RC2
+    * [OPENENGSB-1495] - Upgrade openengsb-domain-issue to 1.2.1
+    * [OPENENGSB-1502] - Upgrade openengsb-connector-git 1.2.1
+    * [OPENENGSB-1503] - Upgrade openengsb-connector-maven to 1.2.1
+    * [OPENENGSB-1506] - Upgrade openengsb-connector-trac to 1.2.1
+    * [OPENENGSB-1572] - Include openengsb-connector-github-1.2.0
+    * [OPENENGSB-1582] - Upgrade to openengsb-root-17
+    * [OPENENGSB-1596] - Upgrade to karaf-2.2.1
+
+** Task
+    * [OPENENGSB-1485] - Release openengsb-bundle-1.2.0.RC2_1
+
+
 openengsb-bundle-1.2.0.RC1_1 2011-04-30
 -----------------------------------------
 
