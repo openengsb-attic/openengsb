@@ -26,7 +26,7 @@
     <karaf.version>2.2.1</karaf.version>
     <openengsb.version>1.3.0.M2</openengsb.version>
     <activemq.version>5.5.0</activemq.version>
-    <domain.appointment.version>1.2.0</domain.appointment.version>
+    <domain.appointment.version>1.2.1</domain.appointment.version>
     <domain.build.version>1.2.0</domain.build.version>
     <domain.contact.version>1.2.0</domain.contact.version>
     <domain.deploy.version>1.2.0</domain.deploy.version>
