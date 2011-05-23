@@ -33,7 +33,7 @@
     <domain.issue.version>1.2.1</domain.issue.version>
     <domain.notification.version>1.2.1</domain.notification.version>
     <domain.report.version>1.2.0</domain.report.version>
-    <domain.scm.version>1.2.0</domain.scm.version>
+    <domain.scm.version>1.2.1</domain.scm.version>
     <domain.test.version>1.2.0</domain.test.version>
     <connector.email.version>1.2.0</connector.email.version>
     <connector.gcalendar.version>1.2.0</connector.gcalendar.version>
