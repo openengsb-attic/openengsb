@@ -42,7 +42,7 @@
     <connector.maven.version>1.2.2</connector.maven.version>
     <connector.plaintextreport.version>1.2.1</connector.plaintextreport.version>
     <connector.promreport.version>1.2.1</connector.promreport.version>
-    <connector.trac.version>1.2.1</connector.trac.version>
+    <connector.trac.version>1.2.2</connector.trac.version>
     <connector.github.version>1.2.0</connector.github.version>
   </properties>
 
