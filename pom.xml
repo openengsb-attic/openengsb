@@ -55,7 +55,7 @@
   <groupId>org.openengsb</groupId>
   <artifactId>openengsb-bundle</artifactId>
   <packaging>pom</packaging>
-  <version>1.3.0.M2_1-SNAPSHOT</version>
+  <version>1.3.0.M2_1</version>
   <name>OpenEngSB :: Bundle</name>
 
   <description>
