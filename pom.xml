@@ -38,7 +38,7 @@
     <connector.email.version>1.2.1</connector.email.version>
     <connector.gcalendar.version>1.2.1</connector.gcalendar.version>
     <connector.gcontacts.version>1.2.1</connector.gcontacts.version>
-    <connector.git.version>1.2.0</connector.git.version>
+    <connector.git.version>1.2.2</connector.git.version>
     <connector.github.version>1.2.1</connector.github.version>
     <connector.maven.version>1.2.0</connector.maven.version>
     <connector.plaintextreport.version>1.2.0</connector.plaintextreport.version>
