@@ -32,7 +32,7 @@
     <domain.deploy.version>1.2.1</domain.deploy.version>
     <domain.issue.version>1.2.2</domain.issue.version>
     <domain.notification.version>1.2.1</domain.notification.version>
-    <domain.report.version>1.2.0</domain.report.version>
+    <domain.report.version>1.2.1</domain.report.version>
     <domain.scm.version>1.2.1</domain.scm.version>
     <domain.test.version>1.2.1</domain.test.version>
     <connector.email.version>1.2.0</connector.email.version>
