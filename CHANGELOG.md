@@ -1,3 +1,17 @@
+openengsb-bundle-1.2.0.RC3_1 2011-06-19
+-----------------------------------------
+
+This bundle release contains a new version of the OpenEngSB Root definition (18), OpenEngSB-Framework (1.2.0.RC3) and OpenEngSB Maven Connector (1.2.3).
+
+** Library Upgrade
+    * [OPENENGSB-1740] - Upgrade openengsb-framework to 1.2.0.RC3
+    * [OPENENGSB-1741] - Upgrade openengsb-root to 18
+    * [OPENENGSB-1742] - Upgrade openengsb-connector-maven to 1.2.3
+
+** Task
+    * [OPENENGSB-1592] - Release openengsb-bundle-1.2.0.RC3_1
+
+
 openengsb-bundle-1.2.0.RC2_2 2011-05-23
 -----------------------------------------
 
