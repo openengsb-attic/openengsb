@@ -40,7 +40,7 @@
     <connector.gcontacts.version>1.2.1</connector.gcontacts.version>
     <connector.git.version>1.2.2</connector.git.version>
     <connector.github.version>1.2.1</connector.github.version>
-    <connector.maven.version>1.2.2</connector.maven.version>
+    <connector.maven.version>1.2.3</connector.maven.version>
     <connector.plaintextreport.version>1.2.1</connector.plaintextreport.version>
     <connector.promreport.version>1.2.1</connector.promreport.version>
     <connector.trac.version>1.2.2</connector.trac.version>
