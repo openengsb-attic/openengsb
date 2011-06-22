@@ -457,6 +457,7 @@
                 <feature>openengsb-connector-promreport</feature>
                 <feature>openengsb-connector-trac</feature>
                 <!-- OpenEngSB Features -->
+                <feature>openengsb-ports-jms</feature>
                 <feature>openengsb-ports-ws</feature>
                 <feature>openengsb-ports-rs</feature>
                 <!-- Additional Optional Features -->
