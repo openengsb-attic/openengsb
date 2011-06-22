@@ -1,7 +1,23 @@
+openengsb-bundle-1.2.0.RELEASE_1 2011-06-22
+-----------------------------------------
+
+This bundle release contains a new version of the OpenEngSB Framework (1.2.0.RELEASE) and a minor fix to it's scripts.
+
+** Bug
+    * [OPENENGSB-1750] - Assembly script does not include openengsb-ports-jms feature
+
+** Library Upgrade
+    * [OPENENGSB-1749] - Upgrade openengsb-framework to 1.2.0.RELEASE
+
+** Task
+    * [OPENENGSB-1612] - Release openengsb-bundle-1.2.0.RELEASE_1
+
+
 openengsb-bundle-1.2.0.RC3_1 2011-06-19
 -----------------------------------------
 
-This bundle release contains a new version of the OpenEngSB Root definition (18), OpenEngSB-Framework (1.2.0.RC3) and OpenEngSB Maven Connector (1.2.3).
+This bundle release contains a new version of the OpenEngSB Root definition (18), OpenEngSB-Framework (1.2.0.RC3) and 
+OpenEngSB Maven Connector (1.2.3).
 
 ** Library Upgrade
     * [OPENENGSB-1740] - Upgrade openengsb-framework to 1.2.0.RC3
@@ -15,7 +31,11 @@ This bundle release contains a new version of the OpenEngSB Root definition (18)
 openengsb-bundle-1.2.0.RC2_2 2011-05-23
 -----------------------------------------
 
-Updating all connectors and domains which include an osgi.bundle file by now and reference to the OpenEngSB Framework 1.3.0.M2. In detail we've updated to Appointment (1.2.1), Build (1.2.1), Contact (1.2.1), Deploy (1.2.1), Notification (1.2.1), Report (1.2.1), Issue (1.2.2), SCM (1.2.1) and Test (1.2.1) Domain. In addition the Email (1.2.1), Google Calendar (1.2.1), Plain Text Report (1.2.1), Prom Report (1.2.1), Git (1.2.2), Maven (1.2.2), Trac (1.2.2), Github Isssues (1.2.1) and Google Contacts (1.2.1) Connectors had been upgraded to their latest Domain versions.
+Updating all connectors and domains which include an osgi.bundle file by now and reference to the OpenEngSB Framework 
+1.3.0.M2. In detail we've updated to Appointment (1.2.1), Build (1.2.1), Contact (1.2.1), Deploy (1.2.1), 
+Notification (1.2.1), Report (1.2.1), Issue (1.2.2), SCM (1.2.1) and Test (1.2.1) Domain. In addition the Email (1.2.1),
+ Google Calendar (1.2.1), Plain Text Report (1.2.1), Prom Report (1.2.1), Git (1.2.2), Maven (1.2.2), Trac (1.2.2), 
+Github Isssues (1.2.1) and Google Contacts (1.2.1) Connectors had been upgraded to their latest Domain versions.
 
 ** Library Upgrade
     * [OPENENGSB-1491] - Upgrade openengsb-domain-appointment to 1.2.1
@@ -44,7 +64,8 @@ Updating all connectors and domains which include an osgi.bundle file by now and
 openengsb-bundle-1.2.0.RC2_1 2011-05-17
 -----------------------------------------
 
-Upgrade karaf, openengsb-root and include the latest openengsb-framework. In addition introduce github connector and minor upgrades/fixes to issue domain and git, maven and trac connector.
+Upgrade karaf, openengsb-root and include the latest openengsb-framework. In addition introduce github connector and 
+minor upgrades/fixes to issue domain and git, maven and trac connector.
 
 ** Library Upgrade
     * [OPENENGSB-1488] - Upgrade openengsb-framework to 1.2.0.RC2
