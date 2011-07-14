@@ -1,3 +1,18 @@
+openengsb-bundle-1.2.1-RELEASE_1 2011-07-14
+-----------------------------------------
+
+This bundle release contains a new version of the OpenEngSB Framework (1.2.1.RELEASE), of Apache Karaf (2.2.2) and OpenEngSB 
+Parent Script (19).
+
+** Library Upgrade
+    * [OPENENGSB-1766] - Upgrade to openengsb-root-19
+    * [OPENENGSB-1827] - Upgrade to openengsb-framework 1.2.1.RELEASE
+    * [OPENENGSB-1828] - Upgrade karaf to 2.2.2
+
+** Task
+    * [OPENENGSB-1613] - Release openengsb-bundle-1.2.1.RELEASE_1
+
+
 openengsb-bundle-1.2.0.RELEASE_1 2011-06-22
 -----------------------------------------
 
