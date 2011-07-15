@@ -1,3 +1,23 @@
+openengsb-bundle-1.3.0.M3 2011-07-15
+-----------------------------------------
+
+For the OpenEngSB 1.3.0.M3 Bundle Release the OpenEngSB Framework (1.3.0.M3) and Apache Karaf (2.2.2) had been updated. A new parent (19) and a new version of the OpenEngSB Maven Connector (1.2.3) are also available. In addition we no longer use the activemq feature descriptor to be able to move faster.
+
+** Bug
+    * [OPENENGSB-1750] - Assembly script does not include openengsb-ports-jms feature
+
+** Library Upgrade
+    * [OPENENGSB-1741] - Upgrade openengsb-root to 18
+    * [OPENENGSB-1742] - Upgrade openengsb-connector-maven to 1.2.3
+    * [OPENENGSB-1766] - Upgrade to openengsb-root-19
+    * [OPENENGSB-1828] - Upgrade karaf to 2.2.2
+    * [OPENENGSB-1832] - Upgrade openengsb-framework to 1.3.0.M3
+
+** Task
+    * [OPENENGSB-1531] - Release openengsb-bundle-1.3.0.M3
+    * [OPENENGSB-1833] - Remove no longer included actimvemq feature
+
+
 openengsb-bundle-1.3.0.M2_1 2011-05-24
 -----------------------------------------
 
