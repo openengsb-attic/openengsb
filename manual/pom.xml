@@ -23,14 +23,15 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <groupId>org.openengsb.docs</groupId>
-    <artifactId>openengsb-docs-parent</artifactId>
-    <version>2.0.0-SNAPSHOT</version>
+    <groupId>org.openengsb</groupId>
+    <artifactId>openengsb-shared-settings</artifactId>
+    <version>3.0.0-SNAPSHOT</version>
+    <relativePath>../parents/shared</relativePath>
   </parent>
 
   <groupId>org.openengsb.docs</groupId>
   <artifactId>openengsb-docs-manual</artifactId>
-  <version>2.0.0-SNAPSHOT</version>
+  <version>3.0.0-SNAPSHOT</version>
   <name>OpenEngSB :: Documentation :: Manual</name>
   <packaging>pom</packaging>
 
@@ -52,27 +53,43 @@
   </scm>
 
   <build>
-    <resources>
-      <resource>
-        <directory>src/main/docbkx</directory>
-        <filtering>true</filtering>
-      </resource>
-    </resources>
     <plugins>
-      <plugin>
+	  <plugin>
         <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-resources-plugin</artifactId>
-        <version>${maven.plugin.resources.version}</version>   
+        <artifactId>maven-dependency-plugin</artifactId>
         <executions>
           <execution>
-            <id>resources</id>
+            <id>unpack</id>
             <phase>generate-resources</phase>
             <goals>
-              <goal>resources</goal>
+              <goal>unpack</goal>
             </goals>
+            <configuration>
+              <artifactItems>
+			    <artifactItem>
+                  <groupId>org.openengsb.docs</groupId>
+                  <artifactId>openengsb-docs-framework</artifactId>
+                  <version>3.0.0-SNAPSHOT</version>
+                  <type>zip</type>
+				  <classifier>doc</classifier>
+                  <outputDirectory>${project.build.directory}/classes/</outputDirectory>
+                </artifactItem>
+                <artifactItem>
+                  <groupId>org.openengsb.domain</groupId>
+                  <artifactId>org.openengsb.domain.test</artifactId>
+                  <version>2.0.0-SNAPSHOT</version>
+                  <type>zip</type>
+				  <classifier>doc</classifier>
+                  <outputDirectory>${project.build.directory}/classes/domains</outputDirectory>
+                </artifactItem>
+              </artifactItems>
+            </configuration>
           </execution>
         </executions>
       </plugin>
+	  
+	  
+	  
       <plugin>
         <groupId>com.agilejava.docbkx</groupId>
         <artifactId>docbkx-maven-plugin</artifactId>
@@ -86,13 +103,13 @@
             <configuration>
               <xincludeSupported>true</xincludeSupported>
               <chunkedOutput>false</chunkedOutput>
-              <htmlCustomization>${basedir}/src/main/docbkx/resources/xsl/html.xsl</htmlCustomization>
+              <htmlCustomization>${project.build.directory}/classes/resources/xsl/html.xsl</htmlCustomization>
               <preProcess>
                 <delete dir="${basedir}/target/docbkx/html" />
               </preProcess>
               <postProcess>
                 <copy todir="${basedir}/target/docbkx/html">
-                  <fileset dir="${basedir}/src/main/docbkx/resources">
+                  <fileset dir="${project.build.directory}/classes/resources">
                     <include name="**/*.css" />
                     <include name="**/*.png" />
                     <include name="**/*.gif" />
@@ -100,7 +117,7 @@
                   </fileset>
                 </copy>
                 <copy todir="${basedir}/target/docbkx/html/graphics" flatten="true">
-                  <fileset dir="${basedir}/src/main/docbkx/">
+                  <fileset dir="${project.build.directory}/classes">
                     <exclude name="resources/**" />
                     <include name="**/*.png" />
                     <include name="**/*.gif" />
@@ -124,13 +141,13 @@
             <configuration>
               <xincludeSupported>true</xincludeSupported>
               <chunkedOutput>true</chunkedOutput>
-              <htmlCustomization>${basedir}/src/main/docbkx/resources/xsl/html_chunk.xsl</htmlCustomization>
+              <htmlCustomization>${project.build.directory}/classes/resources/xsl/html_chunk.xsl</htmlCustomization>
               <preProcess>
                 <delete dir="${basedir}/target/docbkx/html" />
               </preProcess>
               <postProcess>
                 <copy todir="${basedir}/target/docbkx/html">
-                  <fileset dir="${basedir}/src/main/docbkx/resources">
+                  <fileset dir="${project.build.directory}/classes/resources">
                     <include name="**/*.css" />
                     <include name="**/*.png" />
                     <include name="**/*.gif" />
@@ -138,7 +155,7 @@
                   </fileset>
                 </copy>
                 <copy todir="${basedir}/target/docbkx/html/graphics" flatten="true">
-                  <fileset dir="${basedir}/src/main/docbkx/">
+                  <fileset dir="${project.build.directory}/classes/">
                     <exclude name="resources/**" />
                     <include name="**/*.png" />
                     <include name="**/*.gif" />
@@ -161,7 +178,7 @@
             </goals>
             <configuration>
               <xincludeSupported>true</xincludeSupported>
-              <foCustomization>${basedir}/src/main/docbkx/resources/xsl/fopdf.xsl</foCustomization>
+              <foCustomization>${project.build.directory}/classes/resources/xsl/fopdf.xsl</foCustomization>
               <imgSrcPath>file:///${basedir}/src/main/docbkx/</imgSrcPath>
               <postProcess>
                 <copy todir="${basedir}/target/manual/pdf">
