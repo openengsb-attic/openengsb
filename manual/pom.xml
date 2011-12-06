@@ -54,7 +54,7 @@
 
   <build>
     <plugins>
-	  <plugin>
+      <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-dependency-plugin</artifactId>
         <executions>
@@ -66,12 +66,12 @@
             </goals>
             <configuration>
               <artifactItems>
-			    <artifactItem>
+                <artifactItem>
                   <groupId>org.openengsb.docs</groupId>
                   <artifactId>openengsb-docs-framework</artifactId>
                   <version>3.0.0-SNAPSHOT</version>
                   <type>zip</type>
-				  <classifier>doc</classifier>
+                  <classifier>doc</classifier>
                   <outputDirectory>${project.build.directory}/classes/</outputDirectory>
                 </artifactItem>
                 <artifactItem>
@@ -79,7 +79,7 @@
                   <artifactId>org.openengsb.domain.test</artifactId>
                   <version>2.0.0-SNAPSHOT</version>
                   <type>zip</type>
-				  <classifier>doc</classifier>
+                  <classifier>doc</classifier>
                   <outputDirectory>${project.build.directory}/classes/domains</outputDirectory>
                 </artifactItem>
               </artifactItems>
@@ -87,9 +87,6 @@
           </execution>
         </executions>
       </plugin>
-	  
-	  
-	  
       <plugin>
         <groupId>com.agilejava.docbkx</groupId>
         <artifactId>docbkx-maven-plugin</artifactId>
