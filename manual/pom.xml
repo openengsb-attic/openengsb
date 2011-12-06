@@ -176,7 +176,7 @@
             <configuration>
               <xincludeSupported>true</xincludeSupported>
               <foCustomization>${project.build.directory}/classes/resources/xsl/fopdf.xsl</foCustomization>
-              <imgSrcPath>file:///${basedir}/src/main/docbkx/</imgSrcPath>
+              <imgSrcPath>file:///${basedir}/target/classes/</imgSrcPath>
               <postProcess>
                 <copy todir="${basedir}/target/manual/pdf">
                   <fileset dir="${basedir}/target/docbkx/pdf">
