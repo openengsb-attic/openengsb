@@ -26,7 +26,7 @@
   <fileSets>
     <!-- Expanded Karaf Runtime -->
     <fileSet>
-      <directory>target/framework/openengsb-${openengsb.version}</directory>
+      <directory>target/framework/openengsb-framework-${openengsb.framework.version}</directory>
       <outputDirectory>/</outputDirectory>
       <excludes>
         <exclude>/bin/*</exclude>
@@ -36,7 +36,7 @@
     </fileSet>
     <!-- Copy over bin/karaf separately to get the correct file mode -->
     <fileSet>
-      <directory>target/framework/openengsb-${openengsb.version}/bin</directory>
+      <directory>target/framework/openengsb-framework-${openengsb.framework.version}/bin</directory>
       <outputDirectory>/bin/</outputDirectory>
       <fileMode>0755</fileMode>
     </fileSet>
@@ -53,7 +53,7 @@
   </fileSets>
   <files>
     <file>
-      <source>${basedir}/CHANGELOG.md</source>
+      <source>${basedir}/../CHANGELOG</source>
       <outputDirectory>/</outputDirectory>
       <destName>CHANGELOG</destName>
       <fileMode>0644</fileMode>

@@ -23,45 +23,56 @@
   <modelVersion>4.0.0</modelVersion>
 
   <properties>
-    <karaf.version>2.2.2</karaf.version>
-    <openengsb.version>1.3.0.M3</openengsb.version>
-    <domain.appointment.version>1.2.1</domain.appointment.version>
-    <domain.build.version>1.2.1</domain.build.version>
-    <domain.contact.version>1.2.1</domain.contact.version>
-    <domain.deploy.version>1.2.1</domain.deploy.version>
-    <domain.issue.version>1.2.2</domain.issue.version>
-    <domain.notification.version>1.2.1</domain.notification.version>
-    <domain.report.version>1.2.1</domain.report.version>
-    <domain.scm.version>1.2.1</domain.scm.version>
-    <domain.test.version>1.2.1</domain.test.version>
-    <connector.email.version>1.2.1</connector.email.version>
-    <connector.gcalendar.version>1.2.1</connector.gcalendar.version>
-    <connector.gcontacts.version>1.2.1</connector.gcontacts.version>
-    <connector.git.version>1.2.2</connector.git.version>
-    <connector.github.version>1.2.1</connector.github.version>
-    <connector.maven.version>1.2.3</connector.maven.version>
-    <connector.plaintextreport.version>1.2.1</connector.plaintextreport.version>
-    <connector.promreport.version>1.2.1</connector.promreport.version>
-    <connector.trac.version>1.2.2</connector.trac.version>
+    <!-- OpenEngSB Framework Bound Versions -->
+    <openengsb.framework.version>2.3.0-SNAPSHOT</openengsb.framework.version>
+    <karaf.version>2.2.4</karaf.version>
+    <jai.version>1.1.3</jai.version>
+    <docbkx.version>2.0.13</docbkx.version>
+    <docbkx.xml.version>5.0-all</docbkx.xml.version>
+    <!-- Domain Versions -->
+    <domain.appointment.version>2.0.0-SNAPSHOT</domain.appointment.version>
+    <domain.build.version>2.0.0-SNAPSHOT</domain.build.version>
+    <domain.contact.version>2.0.0-SNAPSHOT</domain.contact.version>
+    <domain.deploy.version>2.0.0-SNAPSHOT</domain.deploy.version>
+    <domain.issue.version>2.0.0-SNAPSHOT</domain.issue.version>
+    <domain.notification.version>2.0.0-SNAPSHOT</domain.notification.version>
+    <domain.report.version>2.0.0-SNAPSHOT</domain.report.version>
+    <domain.scm.version>2.0.0-SNAPSHOT</domain.scm.version>
+    <domain.test.version>2.0.0-SNAPSHOT</domain.test.version>
+    <connector.email.version>2.0.0-SNAPSHOT</connector.email.version>
+    <connector.gcalendar.version>2.0.0-SNAPSHOT</connector.gcalendar.version>
+    <connector.gcontacts.version>2.0.0-SNAPSHOT</connector.gcontacts.version>
+    <connector.git.version>2.0.0-SNAPSHOT</connector.git.version>
+    <connector.github.version>2.0.0-SNAPSHOT</connector.github.version>
+    <connector.maven.version>2.0.0-SNAPSHOT</connector.maven.version>
+    <connector.plaintextreport.version>2.0.0-SNAPSHOT</connector.plaintextreport.version>
+    <connector.promreport.version>2.0.0-SNAPSHOT</connector.promreport.version>
+    <connector.trac.version>2.0.0-SNAPSHOT</connector.trac.version>
   </properties>
 
   <parent>
     <groupId>org.openengsb</groupId>
     <artifactId>openengsb-root</artifactId>
-    <version>26</version>
+    <version>27-SNAPSHOT</version>
   </parent>
 
   <groupId>org.openengsb</groupId>
-  <artifactId>openengsb-bundle</artifactId>
+  <artifactId>openengsb-parent</artifactId>
   <packaging>pom</packaging>
-  <version>1.3.0-SNAPSHOT</version>
-  <name>OpenEngSB :: Bundle</name>
+  <version>2.0.0-SNAPSHOT</version>
+  <name>OpenEngSB :: Parent</name>
 
   <description>
     Project bundling up anything required for the OpenEngSB into one single zip file
   </description>
 
   <url>http://openengsb.org</url>
+
+  <modules>
+    <module>manual</module>
+    <module>branding/shell</module>
+    <module>assembly</module>
+  </modules>
 
   <licenses>
     <license>
@@ -72,417 +83,23 @@
   </licenses>
 
   <scm>
-    <connection>scm:git:git://github.com/openengsb/openengsb-bundle.git</connection>
-    <developerConnection>scm:git:git@github.com:openengsb/openengsb-bundle.git</developerConnection>
-    <url>http://github.com/openengsb/openengsb-bundle</url>
+    <connection>scm:git:git://github.com/openengsb/openengsb.git</connection>
+    <developerConnection>scm:git:git@github.com:openengsb/openengsb.git</developerConnection>
+    <url>http://github.com/openengsb/openengsb</url>
   </scm>
 
-  <dependencies>
-    <!-- Environment Features -->
-    <dependency>
-      <groupId>org.apache.karaf.assemblies.features</groupId>
-      <artifactId>standard</artifactId>
-      <type>xml</type>
-      <classifier>features</classifier>
-      <version>${karaf.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.karaf.assemblies.features</groupId>
-      <artifactId>enterprise</artifactId>
-      <type>xml</type>
-      <classifier>features</classifier>
-      <version>${karaf.version}</version>
-    </dependency>
-    <!-- OpenEngSB Framework -->
-    <dependency>
-      <groupId>org.openengsb</groupId>
-      <artifactId>openengsb</artifactId>
-      <type>zip</type>
-      <version>${openengsb.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.openengsb</groupId>
-      <artifactId>openengsb</artifactId>
-      <type>xml</type>
-      <classifier>features</classifier>
-      <version>${openengsb.version}</version>
-    </dependency>
-    <!-- OpenEngSB Examples -->
-    <dependency>
-      <groupId>org.openengsb.docs</groupId>
-      <artifactId>openengsb-docs-examples</artifactId>
-      <classifier>csharp-connector</classifier>
-      <type>zip</type>
-      <version>${openengsb.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.openengsb.docs</groupId>
-      <artifactId>openengsb-docs-examples</artifactId>
-      <classifier>csharp</classifier>
-      <type>zip</type>
-      <version>${openengsb.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.openengsb.docs</groupId>
-      <artifactId>openengsb-docs-examples</artifactId>
-      <classifier>perl-connector</classifier>
-      <type>zip</type>
-      <version>${openengsb.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.openengsb.docs</groupId>
-      <artifactId>openengsb-docs-examples</artifactId>
-      <classifier>perl</classifier>
-      <type>zip</type>
-      <version>${openengsb.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.openengsb.docs</groupId>
-      <artifactId>openengsb-docs-examples</artifactId>
-      <classifier>python-connector</classifier>
-      <type>zip</type>
-      <version>${openengsb.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.openengsb.docs</groupId>
-      <artifactId>openengsb-docs-examples</artifactId>
-      <classifier>python</classifier>
-      <type>zip</type>
-      <version>${openengsb.version}</version>
-    </dependency>
-    <!-- OpenEngSB Various Language Connectors -->
-    <!-- OpenEngSB Domains -->
-    <dependency>
-      <groupId>org.openengsb.domain</groupId>
-      <artifactId>openengsb-domain-appointment</artifactId>
-      <type>xml</type>
-      <classifier>features</classifier>
-      <version>${domain.appointment.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.openengsb.domain</groupId>
-      <artifactId>openengsb-domain-build</artifactId>
-      <type>xml</type>
-      <classifier>features</classifier>
-      <version>${domain.build.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.openengsb.domain</groupId>
-      <artifactId>openengsb-domain-contact</artifactId>
-      <type>xml</type>
-      <classifier>features</classifier>
-      <version>${domain.contact.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.openengsb.domain</groupId>
-      <artifactId>openengsb-domain-deploy</artifactId>
-      <type>xml</type>
-      <classifier>features</classifier>
-      <version>${domain.deploy.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.openengsb.domain</groupId>
-      <artifactId>openengsb-domain-issue</artifactId>
-      <type>xml</type>
-      <classifier>features</classifier>
-      <version>${domain.issue.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.openengsb.domain</groupId>
-      <artifactId>openengsb-domain-notification</artifactId>
-      <type>xml</type>
-      <classifier>features</classifier>
-      <version>${domain.notification.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.openengsb.domain</groupId>
-      <artifactId>openengsb-domain-report</artifactId>
-      <type>xml</type>
-      <classifier>features</classifier>
-      <version>${domain.report.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.openengsb.domain</groupId>
-      <artifactId>openengsb-domain-scm</artifactId>
-      <type>xml</type>
-      <classifier>features</classifier>
-      <version>${domain.scm.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.openengsb.domain</groupId>
-      <artifactId>openengsb-domain-test</artifactId>
-      <type>xml</type>
-      <classifier>features</classifier>
-      <version>${domain.test.version}</version>
-    </dependency>
-    <!-- OpenEngSB Connectors -->
-    <dependency>
-      <groupId>org.openengsb.connector</groupId>
-      <artifactId>openengsb-connector-email</artifactId>
-      <type>xml</type>
-      <classifier>features</classifier>
-      <version>${connector.email.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.openengsb.connector</groupId>
-      <artifactId>openengsb-connector-gcalendar</artifactId>
-      <type>xml</type>
-      <classifier>features</classifier>
-      <version>${connector.gcalendar.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.openengsb.connector</groupId>
-      <artifactId>openengsb-connector-gcontacts</artifactId>
-      <type>xml</type>
-      <classifier>features</classifier>
-      <version>${connector.gcontacts.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.openengsb.connector</groupId>
-      <artifactId>openengsb-connector-git</artifactId>
-      <type>xml</type>
-      <classifier>features</classifier>
-      <version>${connector.git.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.openengsb.connector</groupId>
-      <artifactId>openengsb-connector-github</artifactId>
-      <type>xml</type>
-      <classifier>features</classifier>
-      <version>${connector.github.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.openengsb.connector</groupId>
-      <artifactId>openengsb-connector-maven</artifactId>
-      <type>xml</type>
-      <classifier>features</classifier>
-      <version>${connector.maven.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.openengsb.connector</groupId>
-      <artifactId>openengsb-connector-plaintextreport</artifactId>
-      <type>xml</type>
-      <classifier>features</classifier>
-      <version>${connector.plaintextreport.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.openengsb.connector</groupId>
-      <artifactId>openengsb-connector-promreport</artifactId>
-      <type>xml</type>
-      <classifier>features</classifier>
-      <version>${connector.promreport.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.openengsb.connector</groupId>
-      <artifactId>openengsb-connector-trac</artifactId>
-      <type>xml</type>
-      <classifier>features</classifier>
-      <version>${connector.trac.version}</version>
-    </dependency>
-  </dependencies>
-
-  <build>
-    <resources>
-      <resource>
-        <directory>${project.basedir}/src/main/filtered-resources</directory>
-        <filtering>true</filtering>
-        <includes>
-          <include>**/*</include>
-        </includes>
-      </resource>
-    </resources>
-    <plugins>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-dependency-plugin</artifactId>
-        <executions>
-          <execution>
-            <id>unpack</id>
-            <phase>generate-resources</phase>
-            <goals>
-              <goal>copy</goal>
-            </goals>
-            <configuration>
-              <artifactItems>
-                <artifactItem>
-                  <groupId>org.openengsb.docs</groupId>
-                  <artifactId>openengsb-docs-examples</artifactId>
-                  <type>zip</type>
-                  <classifier>csharp-connector</classifier>
-                </artifactItem>
-                <artifactItem>
-                  <groupId>org.openengsb.docs</groupId>
-                  <artifactId>openengsb-docs-examples</artifactId>
-                  <type>zip</type>
-                  <classifier>csharp</classifier>
-                </artifactItem>
-                <artifactItem>
-                  <groupId>org.openengsb.docs</groupId>
-                  <artifactId>openengsb-docs-examples</artifactId>
-                  <type>zip</type>
-                  <classifier>perl-connector</classifier>
-                </artifactItem>
-                <artifactItem>
-                  <groupId>org.openengsb.docs</groupId>
-                  <artifactId>openengsb-docs-examples</artifactId>
-                  <type>zip</type>
-                  <classifier>perl</classifier>
-                </artifactItem>
-                <artifactItem>
-                  <groupId>org.openengsb.docs</groupId>
-                  <artifactId>openengsb-docs-examples</artifactId>
-                  <type>zip</type>
-                  <classifier>python-connector</classifier>
-                </artifactItem>
-                <artifactItem>
-                  <groupId>org.openengsb.docs</groupId>
-                  <artifactId>openengsb-docs-examples</artifactId>
-                  <type>zip</type>
-                  <classifier>python</classifier>
-                </artifactItem>
-              </artifactItems>
-              <outputDirectory>${project.build.directory}/examples</outputDirectory>
-              <overWriteReleases>true</overWriteReleases>
-              <overWriteSnapshots>true</overWriteSnapshots>
-              <stripVersion>true</stripVersion>
-            </configuration>
-          </execution>
-          <execution>
-            <id>unpack-unix</id>
-            <phase>generate-resources</phase>
-            <goals>
-              <goal>unpack</goal>
-            </goals>
-            <configuration>
-              <artifactItems>
-                <artifactItem>
-                  <groupId>org.openengsb</groupId>
-                  <artifactId>openengsb</artifactId>
-                  <type>zip</type>
-                  <outputDirectory>target/framework</outputDirectory>
-                </artifactItem>
-              </artifactItems>
-            </configuration>
-          </execution>
-        </executions>
-      </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-resources-plugin</artifactId>
-        <configuration>
-          <useDefaultDelimiters>false</useDefaultDelimiters>
-          <delimiters>
-            <delimiter>${*}</delimiter>
-          </delimiters>
-        </configuration>
-        <executions>
-          <execution>
-            <id>filter</id>
-            <phase>generate-resources</phase>
-            <goals>
-              <goal>resources</goal>
-            </goals>
-          </execution>
-        </executions>
-      </plugin>
-      <plugin>
-        <groupId>org.apache.karaf.tooling</groupId>
-        <artifactId>features-maven-plugin</artifactId>
-        <version>${karaf.version}</version>
-        <executions>
-          <execution>
-            <id>add-features-to-repo</id>
-            <phase>generate-resources</phase>
-            <goals>
-              <goal>add-features-to-repo</goal>
-            </goals>
-            <configuration>
-              <descriptors>
-                <!-- Core -->
-                <descriptor>mvn:org.apache.karaf.assemblies.features/standard/${karaf.version}/xml/features</descriptor>
-                <descriptor>mvn:org.apache.karaf.assemblies.features/enterprise/${karaf.version}/xml/features</descriptor>
-                <descriptor>mvn:org.openengsb/openengsb/${openengsb.version}/xml/features</descriptor>
-                <!-- Domains -->
-                <descriptor>mvn:org.openengsb.domain/openengsb-domain-appointment/${domain.appointment.version}/xml/features</descriptor>
-                <descriptor>mvn:org.openengsb.domain/openengsb-domain-build/${domain.build.version}/xml/features</descriptor>
-                <descriptor>mvn:org.openengsb.domain/openengsb-domain-contact/${domain.contact.version}/xml/features</descriptor>
-                <descriptor>mvn:org.openengsb.domain/openengsb-domain-deploy/${domain.deploy.version}/xml/features</descriptor>
-                <descriptor>mvn:org.openengsb.domain/openengsb-domain-issue/${domain.issue.version}/xml/features</descriptor>
-                <descriptor>mvn:org.openengsb.domain/openengsb-domain-notification/${domain.notification.version}/xml/features</descriptor>
-                <descriptor>mvn:org.openengsb.domain/openengsb-domain-report/${domain.report.version}/xml/features</descriptor>
-                <descriptor>mvn:org.openengsb.domain/openengsb-domain-scm/${domain.scm.version}/xml/features</descriptor>
-                <descriptor>mvn:org.openengsb.domain/openengsb-domain-test/${domain.test.version}/xml/features</descriptor>
-                <!-- Connector -->
-                <descriptor>mvn:org.openengsb.connector/openengsb-connector-email/${connector.email.version}/xml/features</descriptor>
-                <descriptor>mvn:org.openengsb.connector/openengsb-connector-gcalendar/${connector.gcalendar.version}/xml/features</descriptor>
-                <descriptor>mvn:org.openengsb.connector/openengsb-connector-gcontacts/${connector.gcontacts.version}/xml/features</descriptor>
-                <descriptor>mvn:org.openengsb.connector/openengsb-connector-git/${connector.git.version}/xml/features</descriptor>
-                <descriptor>mvn:org.openengsb.connector/openengsb-connector-github/${connector.github.version}/xml/features</descriptor>
-                <descriptor>mvn:org.openengsb.connector/openengsb-connector-maven/${connector.maven.version}/xml/features</descriptor>
-                <descriptor>mvn:org.openengsb.connector/openengsb-connector-plaintextreport/${connector.plaintextreport.version}/xml/features</descriptor>
-                <descriptor>mvn:org.openengsb.connector/openengsb-connector-promreport/${connector.promreport.version}/xml/features</descriptor>
-                <descriptor>mvn:org.openengsb.connector/openengsb-connector-trac/${connector.trac.version}/xml/features</descriptor>
-              </descriptors>
-              <features>
-                <!-- Karaf -->
-                <feature>ssh</feature>
-                <feature>obr</feature>
-                <feature>management</feature>
-                <feature>wrapper</feature>
-                <!-- OpenEngSB Domains -->
-                <feature>openengsb-domain-appointment</feature>
-                <feature>openengsb-domain-build</feature>
-                <feature>openengsb-domain-contact</feature>
-                <feature>openengsb-domain-deploy</feature>
-                <feature>openengsb-domain-issue</feature>
-                <feature>openengsb-domain-notification</feature>
-                <feature>openengsb-domain-report</feature>
-                <feature>openengsb-domain-scm</feature>
-                <feature>openengsb-domain-test</feature>
-                <!-- OpenEngSB Connectors -->
-                <feature>openengsb-connector-email</feature>
-                <feature>openengsb-connector-gcalendar</feature>
-                <feature>openengsb-connector-gcontacts</feature>
-                <feature>openengsb-connector-git</feature>
-                <feature>openengsb-connector-github</feature>
-                <feature>openengsb-connector-maven</feature>
-                <feature>openengsb-connector-plaintextreport</feature>
-                <feature>openengsb-connector-promreport</feature>
-                <feature>openengsb-connector-trac</feature>
-                <!-- OpenEngSB Features -->
-                <feature>openengsb-ports-jms</feature>
-                <feature>openengsb-ports-ws</feature>
-                <feature>openengsb-ports-rs</feature>
-                <!-- Additional Optional Features -->
-                <feature>activemq-web-console</feature>
-              </features>
-              <includeMvnBasedDescriptors>true</includeMvnBasedDescriptors>
-              <repository>target/features-repo</repository>
-              <failOnArtifactResolutionError>true</failOnArtifactResolutionError>
-            </configuration>
-          </execution>
-        </executions>
-      </plugin>
-      <plugin>
-        <artifactId>maven-assembly-plugin</artifactId>
-        <configuration>
-          <appendAssemblyId>false</appendAssemblyId>
-          <descriptors>
-            <descriptor>${project.basedir}/src/main/descriptors/bundle.xml</descriptor>
-          </descriptors>
-        </configuration>
-        <executions>
-          <execution>
-            <id>assembly-openengsb</id>
-            <phase>package</phase>
-            <goals>
-              <goal>single</goal>
-            </goals>
-          </execution>
-        </executions>
-      </plugin>
-    </plugins>
-  </build>
+  <dependencyManagement>
+    <dependencies>
+      <!-- Reusability of the OpenEngSB Dependency Definitions -->
+      <dependency>
+        <groupId>org.openengsb</groupId>
+        <artifactId>openengsb-shared-settings</artifactId>
+        <version>${openengsb.framework.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
 
 </project>
 

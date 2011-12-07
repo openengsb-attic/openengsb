@@ -24,20 +24,20 @@
 
   <parent>
     <groupId>org.openengsb</groupId>
-    <artifactId>openengsb-shared-settings</artifactId>
-    <version>3.0.0-SNAPSHOT</version>
-    <relativePath>../parents/shared</relativePath>
+    <artifactId>openengsb-parent</artifactId>
+    <version>2.0.0-SNAPSHOT</version>
   </parent>
 
-  <groupId>org.openengsb.docs</groupId>
-  <artifactId>openengsb-docs-manual</artifactId>
-  <version>3.0.0-SNAPSHOT</version>
-  <name>OpenEngSB :: Documentation :: Manual</name>
+  <groupId>org.openengsb</groupId>
+  <artifactId>openengsb-manual</artifactId>
+  <version>2.0.0-SNAPSHOT</version>
+  <name>OpenEngSB :: Manual</name>
   <packaging>pom</packaging>
 
-  <description>Manual for the Open Engineering Service Bus</description>
+  <description>Summary of the entire OpenEngSB Manaul</description>
 
   <url>http://www.openengsb.org</url>
+
   <licenses>
     <license>
       <name>Apache 2</name>
@@ -47,9 +47,9 @@
   </licenses>
 
   <scm>
-    <connection>scm:git:git://github.com/openengsb/openengsb-framework.git</connection>
-    <developerConnection>scm:git:git@github.com:openengsb/openengsb-framework.git</developerConnection>
-    <url>http://github.com/openengsb/openengsb-framework</url>
+    <connection>scm:git:git://github.com/openengsb/openengsb.git</connection>
+    <developerConnection>scm:git:git@github.com:openengsb/openengsb.git</developerConnection>
+    <url>http://github.com/openengsb/openengsb</url>
   </scm>
 
   <build>
@@ -69,7 +69,7 @@
                 <artifactItem>
                   <groupId>org.openengsb.docs</groupId>
                   <artifactId>openengsb-docs-framework</artifactId>
-                  <version>3.0.0-SNAPSHOT</version>
+                  <version>${openengsb.framework.version}</version>
                   <type>zip</type>
                   <classifier>doc</classifier>
                   <outputDirectory>${project.build.directory}/classes/</outputDirectory>
@@ -77,7 +77,7 @@
                 <artifactItem>
                   <groupId>org.openengsb.domain</groupId>
                   <artifactId>org.openengsb.domain.test</artifactId>
-                  <version>2.0.0-SNAPSHOT</version>
+                  <version>${domain.test.version}</version>
                   <type>zip</type>
                   <classifier>doc</classifier>
                   <outputDirectory>${project.build.directory}/classes/domains</outputDirectory>

@@ -21,27 +21,25 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
   <parent>
-    <groupId>org.openengsb.branding</groupId>
-    <artifactId>openengsb-branding-parent</artifactId>
+    <groupId>org.openengsb</groupId>
+    <artifactId>openengsb-parent</artifactId>
     <version>2.0.0-SNAPSHOT</version>
+    <relativePath>../../</relativePath>
   </parent>
-
-  <properties>
-    <bundle.symbolicName>org.openengsb.branding.shell</bundle.symbolicName>
-    <bundle.namespace>org.apache.karaf.branding</bundle.namespace>
-  </properties>
 
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.openengsb.branding</groupId>
-  <artifactId>openengsb-branding-shell</artifactId>
+  <artifactId>org.openengsb.branding.shell</artifactId>
   <version>2.0.0-SNAPSHOT</version>
 
   <name>OpenEngSB :: Branding :: Shell</name>
 
   <packaging>bundle</packaging>
 
-  <description>Brands the Karaf shell with the OpenEngSB logo</description>
+  <description>Brands the Karaf shell with the OpenEngSB Logo</description>
+
   <url>http://www.openengsb.org</url>
+
   <licenses>
     <license>
       <name>Apache 2</name>
@@ -51,9 +49,9 @@
   </licenses>
 
   <scm>
-    <connection>scm:git:git://github.com/openengsb/openengsb-framework.git</connection>
-    <developerConnection>scm:git:git@github.com:openengsb/openengsb-framework.git</developerConnection>
-    <url>http://github.com/openengsb/openengsb-framework</url>
+    <connection>scm:git:git://github.com/openengsb/openengsb.git</connection>
+    <developerConnection>scm:git:git@github.com:openengsb/openengsb.git</developerConnection>
+    <url>http://github.com/openengsb/openengsb</url>
   </scm>
 
   <build>
@@ -66,6 +64,12 @@
         </includes>
       </resource>
     </resources>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.felix</groupId>
+        <artifactId>maven-bundle-plugin</artifactId>
+      </plugin>
+    </plugins>
   </build>
 
 </project>
