@@ -170,13 +170,13 @@
       <classifier>features</classifier>
       <version>${connector.gcontacts.version}</version>
     </dependency>
-    <dependency>
+    <!--<dependency>
       <groupId>org.openengsb.connector</groupId>
       <artifactId>org.openengsb.connector.git</artifactId>
       <type>xml</type>
       <classifier>features</classifier>
       <version>${connector.git.version}</version>
-    </dependency>
+    </dependency>-->
     <dependency>
       <groupId>org.openengsb.connector</groupId>
       <artifactId>org.openengsb.connector.github</artifactId>
@@ -246,6 +246,26 @@
               </artifactItems>
             </configuration>
           </execution>
+          <execution>
+            <id>branding</id>
+            <phase>generate-resources</phase>
+            <goals>
+              <goal>copy</goal>
+            </goals>
+            <configuration>
+              <artifactItems>
+                <artifactItem>
+                  <groupId>org.openengsb.branding</groupId>
+                  <artifactId>org.openengsb.branding.shell</artifactId>
+                  <version>${project.version}</version>
+                </artifactItem>
+              </artifactItems>
+              <outputDirectory>target/dependencies/lib</outputDirectory>
+              <overWriteReleases>true</overWriteReleases>
+              <overWriteSnapshots>true</overWriteSnapshots>
+              <stripVersion>true</stripVersion>
+            </configuration>
+          </execution>
         </executions>
       </plugin>
       <plugin>
@@ -298,7 +318,7 @@
                 <descriptor>mvn:org.openengsb.connector/org.openengsb.connector.email/${connector.email.version}/xml/features</descriptor>
                 <descriptor>mvn:org.openengsb.connector/org.openengsb.connector.gcalendar/${connector.gcalendar.version}/xml/features</descriptor>
                 <descriptor>mvn:org.openengsb.connector/org.openengsb.connector.gcontacts/${connector.gcontacts.version}/xml/features</descriptor>
-                <descriptor>mvn:org.openengsb.connector/org.openengsb.connector.git/${connector.git.version}/xml/features</descriptor>
+                <!--<descriptor>mvn:org.openengsb.connector/org.openengsb.connector.git/${connector.git.version}/xml/features</descriptor>-->
                 <descriptor>mvn:org.openengsb.connector/org.openengsb.connector.github/${connector.github.version}/xml/features</descriptor>
                 <descriptor>mvn:org.openengsb.connector/org.openengsb.connector.maven/${connector.maven.version}/xml/features</descriptor>
                 <descriptor>mvn:org.openengsb.connector/org.openengsb.connector.plaintextreport/${connector.plaintextreport.version}/xml/features</descriptor>
@@ -325,7 +345,7 @@
                 <feature>openengsb-connector-email</feature>
                 <feature>openengsb-connector-gcalendar</feature>
                 <feature>openengsb-connector-gcontacts</feature>
-                <feature>openengsb-connector-git</feature>
+                <!--<feature>openengsb-connector-git</feature>-->
                 <feature>openengsb-connector-github</feature>
                 <feature>openengsb-connector-maven</feature>
                 <feature>openengsb-connector-plaintextreport</feature>
