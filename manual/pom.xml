@@ -53,7 +53,36 @@
   </scm>
 
   <build>
+    <resources>
+      <resource>
+        <directory>src/manual</directory>
+        <filtering>true</filtering>
+      </resource>
+      <resource>
+        <directory>src/descriptors</directory>
+        <filtering>true</filtering>
+      </resource>
+    </resources>
     <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-resources-plugin</artifactId>
+        <configuration>
+          <useDefaultDelimiters>false</useDefaultDelimiters>
+          <delimiters>
+            <delimiter>${*}</delimiter>
+          </delimiters>
+        </configuration>
+        <executions>
+          <execution>
+            <id>filter</id>
+            <phase>generate-resources</phase>
+            <goals>
+              <goal>resources</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-dependency-plugin</artifactId>
@@ -67,12 +96,12 @@
             <configuration>
               <artifactItems>
                 <artifactItem>
-                  <groupId>org.openengsb.docs</groupId>
-                  <artifactId>openengsb-docs-framework</artifactId>
+                  <groupId>org.openengsb.framework</groupId>
+                  <artifactId>openengsb-framework-manual</artifactId>
                   <version>${openengsb.framework.version}</version>
                   <type>zip</type>
-                  <classifier>doc</classifier>
-                  <outputDirectory>${project.build.directory}/classes/</outputDirectory>
+                  <classifier>docbook</classifier>
+                  <outputDirectory>${project.build.directory}/classes/framework</outputDirectory>
                 </artifactItem>
                 <artifactItem>
                   <groupId>org.openengsb.domain</groupId>
@@ -80,7 +109,17 @@
                   <version>${domain.test.version}</version>
                   <type>zip</type>
                   <classifier>doc</classifier>
-                  <outputDirectory>${project.build.directory}/classes/domains</outputDirectory>
+                  <outputDirectory>${project.build.directory}/classes/domain/test</outputDirectory>
+                </artifactItem>
+                <artifactItem>
+                  <groupId>org.openengsb</groupId>
+                  <artifactId>openengsb-manual-builder-resources</artifactId>
+                  <outputDirectory>${project.build.directory}/manual-resources</outputDirectory>
+                </artifactItem>
+                <artifactItem>
+                  <groupId>org.openengsb</groupId>
+                  <artifactId>openengsb-assembly-builder-resources</artifactId>
+                  <outputDirectory>${project.build.directory}/assembly-resources</outputDirectory>
                 </artifactItem>
               </artifactItems>
             </configuration>
@@ -100,13 +139,13 @@
             <configuration>
               <xincludeSupported>true</xincludeSupported>
               <chunkedOutput>false</chunkedOutput>
-              <htmlCustomization>${project.build.directory}/classes/resources/xsl/html.xsl</htmlCustomization>
+              <htmlCustomization>${project.build.directory}/manual-resources/xsl/html.xsl</htmlCustomization>
               <preProcess>
                 <delete dir="${basedir}/target/docbkx/html" />
               </preProcess>
               <postProcess>
                 <copy todir="${basedir}/target/docbkx/html">
-                  <fileset dir="${project.build.directory}/classes/resources">
+                  <fileset dir="${project.build.directory}/manual-resources">
                     <include name="**/*.css" />
                     <include name="**/*.png" />
                     <include name="**/*.gif" />
@@ -138,13 +177,13 @@
             <configuration>
               <xincludeSupported>true</xincludeSupported>
               <chunkedOutput>true</chunkedOutput>
-              <htmlCustomization>${project.build.directory}/classes/resources/xsl/html_chunk.xsl</htmlCustomization>
+              <htmlCustomization>${project.build.directory}/manual-resources/xsl/html_chunk.xsl</htmlCustomization>
               <preProcess>
                 <delete dir="${basedir}/target/docbkx/html" />
               </preProcess>
               <postProcess>
                 <copy todir="${basedir}/target/docbkx/html">
-                  <fileset dir="${project.build.directory}/classes/resources">
+                  <fileset dir="${project.build.directory}/manual-resources">
                     <include name="**/*.css" />
                     <include name="**/*.png" />
                     <include name="**/*.gif" />
@@ -164,6 +203,11 @@
                     <include name="**/*" />
                   </fileset>
                 </copy>
+                <copy todir="${basedir}/target/manual/html-multi">
+                  <fileset dir="${basedir}/target/docbkx/html/${project.artifactId}">
+                    <include name="**/*" />
+                  </fileset>
+                </copy>
               </postProcess>
             </configuration>
             <phase>compile</phase>
@@ -175,7 +219,7 @@
             </goals>
             <configuration>
               <xincludeSupported>true</xincludeSupported>
-              <foCustomization>${project.build.directory}/classes/resources/xsl/fopdf.xsl</foCustomization>
+              <foCustomization>${project.build.directory}/manual-resources/xsl/fopdf.xsl</foCustomization>
               <imgSrcPath>file:///${basedir}/target/classes/</imgSrcPath>
               <postProcess>
                 <copy todir="${basedir}/target/manual/pdf">
@@ -211,7 +255,7 @@
           </dependency>
         </dependencies>
         <configuration>
-          <includes>*.xml</includes>
+          <includes>${project.artifactId}.xml</includes>
           <htmlStylesheet>css/html.css</htmlStylesheet>
           <xincludeSupported>true</xincludeSupported>
           <sourceDirectory>${basedir}/target/classes</sourceDirectory>
@@ -228,9 +272,7 @@
         <configuration>
           <appendAssemblyId>true</appendAssemblyId>
           <descriptors>
-            <descriptor>src/main/descriptors/html-multi.xml</descriptor>
-            <descriptor>src/main/descriptors/html-single.xml</descriptor>
-            <descriptor>src/main/descriptors/pdf.xml</descriptor>
+            <descriptor>target/assembly-resources/manual.xml</descriptor>
           </descriptors>
         </configuration>
         <executions>
@@ -240,6 +282,26 @@
             <goals>
               <goal>single</goal>
             </goals>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>wagon-maven-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>upload-manual</id>
+            <phase>deploy</phase>
+            <goals>
+              <goal>upload</goal>
+            </goals>
+            <configuration>
+              <fromDir>${basedir}/target/manual/</fromDir>
+              <includes>*/**</includes>
+              <url>scp://openengsb.org/</url>
+              <toDir>var/www/openengsb/manual/${project.artifactId}/v${project.version}/</toDir>
+              <serverId>OpenengsbWebServer</serverId>
+            </configuration>
           </execution>
         </executions>
       </plugin>
@@ -256,19 +318,9 @@
             <configuration>
               <artifacts>
                 <artifact>
-                  <file>target/openengsb-docs-manual-${project.version}-html-multi.zip</file>
+                  <file>target/openengsb-manual-${project.version}-manual.zip</file>
                   <type>zip</type>
-                  <classifier>html-multi</classifier>
-                </artifact>
-                <artifact>
-                  <file>target/openengsb-docs-manual-${project.version}-html-single.zip</file>
-                  <type>zip</type>
-                  <classifier>html-single</classifier>
-                </artifact>
-                <artifact>
-                  <file>target/openengsb-docs-manual-${project.version}-pdf.zip</file>
-                  <type>zip</type>
-                  <classifier>pdf</classifier>
+                  <classifier>manual</classifier>
                 </artifact>
               </artifacts>
             </configuration>
