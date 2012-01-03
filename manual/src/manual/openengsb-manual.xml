@@ -80,6 +80,32 @@
     <xi:include href="framework/user/howto/howtoIntegrateServices.xml"/>
     <xi:include href="framework/user/howto/howtoChangeEDBDatabaseBackend.xml"/>
   </part>
+  <part xml:id="user.connectors">
+    <title>Included Domains and Connectors</title>
+    <partintro>
+      <para> This part contains descpriptions and documentation for all domains and connectors that are included in the
+        bundle release.</para>
+    </partintro>
+    <xi:include href="domain/appointment/org.openengsb.domain.appointment.xml" />
+    <xi:include href="domain/build/org.openengsb.domain.build.xml" />
+    <xi:include href="domain/contact/org.openengsb.domain.contact.xml" />
+    <xi:include href="domain/deploy/org.openengsb.domain.deploy.xml" />
+    <xi:include href="domain/issue/org.openengsb.domain.issue.xml" />
+    <xi:include href="domain/notification/org.openengsb.domain.notification.xml" />
+    <xi:include href="domain/report/org.openengsb.domain.report.xml" />
+    <xi:include href="domain/scm/org.openengsb.domain.scm.xml" />
+    <xi:include href="domain/test/org.openengsb.domain.test.xml" />
+
+    <xi:include href="connector/email/org.openengsb.connector.email.xml" />
+    <xi:include href="connector/gcalendar/org.openengsb.connector.gcalendar.xml" />
+    <xi:include href="connector/gcontacts/org.openengsb.connector.gcontacts.xml" />
+    <xi:include href="connector/git/org.openengsb.connector.git.xml" />
+    <xi:include href="connector/github/org.openengsb.connector.github.xml" />
+    <xi:include href="connector/maven/org.openengsb.connector.maven.xml" />
+    <xi:include href="connector/plaintextreport/org.openengsb.connector.plaintextreport.xml" />
+    <xi:include href="connector/promreport/org.openengsb.connector.promreport.xml" />
+    <xi:include href="connector/trac/org.openengsb.connector.trac.xml" />
+  </part>
   <part xml:id="console.ui.manual">
     <title>Administration Console</title>
     <partintro>

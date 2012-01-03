@@ -104,14 +104,6 @@
                   <outputDirectory>${project.build.directory}/classes/framework</outputDirectory>
                 </artifactItem>
                 <artifactItem>
-                  <groupId>org.openengsb.domain</groupId>
-                  <artifactId>org.openengsb.domain.test</artifactId>
-                  <version>${domain.test.version}</version>
-                  <type>zip</type>
-                  <classifier>doc</classifier>
-                  <outputDirectory>${project.build.directory}/classes/domain/test</outputDirectory>
-                </artifactItem>
-                <artifactItem>
                   <groupId>org.openengsb</groupId>
                   <artifactId>openengsb-manual-builder-resources</artifactId>
                   <outputDirectory>${project.build.directory}/manual-resources</outputDirectory>
@@ -121,6 +113,153 @@
                   <artifactId>openengsb-assembly-builder-resources</artifactId>
                   <outputDirectory>${project.build.directory}/assembly-resources</outputDirectory>
                 </artifactItem>
+
+                <!-- OpenEngSB Domains -->
+                <artifactitem>
+                  <groupId>org.openengsb.domain</groupId>
+                  <artifactId>org.openengsb.domain.appointment</artifactId>
+                  <type>zip</type>
+                  <classifier>docbook</classifier>
+                  <version>${domain.appointment.version}</version>
+                  <outputDirectory>${project.build.directory}/classes/domain/appointment</outputDirectory>
+                </artifactitem>
+                <artifactitem>
+                  <groupId>org.openengsb.domain</groupId>
+                  <artifactId>org.openengsb.domain.build</artifactId>
+                  <type>zip</type>
+                  <classifier>docbook</classifier>
+                  <version>${domain.build.version}</version>
+                  <outputDirectory>${project.build.directory}/classes/domain/build</outputDirectory>
+                </artifactitem>
+                <artifactitem>
+                  <groupId>org.openengsb.domain</groupId>
+                  <artifactId>org.openengsb.domain.contact</artifactId>
+                  <type>zip</type>
+                  <classifier>docbook</classifier>
+                  <version>${domain.contact.version}</version>
+                  <outputDirectory>${project.build.directory}/classes/domain/contact</outputDirectory>
+                </artifactitem>
+                <artifactitem>
+                  <groupId>org.openengsb.domain</groupId>
+                  <artifactId>org.openengsb.domain.deploy</artifactId>
+                  <type>zip</type>
+                  <classifier>docbook</classifier>
+                  <version>${domain.deploy.version}</version>
+                  <outputDirectory>${project.build.directory}/classes/domain/deploy</outputDirectory>
+                </artifactitem>
+                <artifactitem>
+                  <groupId>org.openengsb.domain</groupId>
+                  <artifactId>org.openengsb.domain.issue</artifactId>
+                  <type>zip</type>
+                  <classifier>docbook</classifier>
+                  <version>${domain.issue.version}</version>
+                  <outputDirectory>${project.build.directory}/classes/domain/issue</outputDirectory>
+                </artifactitem>
+                <artifactitem>
+                  <groupId>org.openengsb.domain</groupId>
+                  <artifactId>org.openengsb.domain.notification</artifactId>
+                  <type>zip</type>
+                  <classifier>docbook</classifier>
+                  <version>${domain.notification.version}</version>
+                  <outputDirectory>${project.build.directory}/classes/domain/notification</outputDirectory>
+                </artifactitem>
+                <artifactitem>
+                  <groupId>org.openengsb.domain</groupId>
+                  <artifactId>org.openengsb.domain.report</artifactId>
+                  <type>zip</type>
+                  <classifier>docbook</classifier>
+                  <version>${domain.report.version}</version>
+                  <outputDirectory>${project.build.directory}/classes/domain/report</outputDirectory>
+                </artifactitem>
+                <artifactitem>
+                  <groupId>org.openengsb.domain</groupId>
+                  <artifactId>org.openengsb.domain.scm</artifactId>
+                  <type>zip</type>
+                  <classifier>docbook</classifier>
+                  <version>${domain.scm.version}</version>
+                  <outputDirectory>${project.build.directory}/classes/domain/scm</outputDirectory>
+                </artifactitem>
+                <artifactitem>
+                  <groupId>org.openengsb.domain</groupId>
+                  <artifactId>org.openengsb.domain.test</artifactId>
+                  <type>zip</type>
+                  <classifier>docbook</classifier>
+                  <version>${domain.test.version}</version>
+                  <outputDirectory>${project.build.directory}/classes/domain/test</outputDirectory>
+                </artifactitem>
+                <!-- OpenEngSB Connectors -->
+                <artifactitem>
+                  <groupId>org.openengsb.connector</groupId>
+                  <artifactId>org.openengsb.connector.email</artifactId>
+                  <type>zip</type>
+                  <classifier>docbook</classifier>
+                  <version>${connector.email.version}</version>
+                  <outputDirectory>${project.build.directory}/classes/connector/email</outputDirectory>
+                </artifactitem>
+                <artifactitem>
+                  <groupId>org.openengsb.connector</groupId>
+                  <artifactId>org.openengsb.connector.gcalendar</artifactId>
+                  <type>zip</type>
+                  <classifier>docbook</classifier>
+                  <version>${connector.gcalendar.version}</version>
+                  <outputDirectory>${project.build.directory}/classes/connector/gcalendar</outputDirectory>
+                </artifactitem>
+                <artifactitem>
+                  <groupId>org.openengsb.connector</groupId>
+                  <artifactId>org.openengsb.connector.gcontacts</artifactId>
+                  <type>zip</type>
+                  <classifier>docbook</classifier>
+                  <version>${connector.gcontacts.version}</version>
+                  <outputDirectory>${project.build.directory}/classes/connector/gcontacts</outputDirectory>
+                </artifactitem>
+                <artifactitem>
+                  <groupId>org.openengsb.connector</groupId>
+                  <artifactId>org.openengsb.connector.git</artifactId>
+                  <type>zip</type>
+                  <classifier>docbook</classifier>
+                  <version>${connector.git.version}</version>
+                  <outputDirectory>${project.build.directory}/classes/connector/git</outputDirectory>
+                </artifactitem>
+                <artifactitem>
+                  <groupId>org.openengsb.connector</groupId>
+                  <artifactId>org.openengsb.connector.github</artifactId>
+                  <type>zip</type>
+                  <classifier>docbook</classifier>
+                  <version>${connector.github.version}</version>
+                  <outputDirectory>${project.build.directory}/classes/connector/github</outputDirectory>
+                </artifactitem>
+                <artifactitem>
+                  <groupId>org.openengsb.connector</groupId>
+                  <artifactId>org.openengsb.connector.maven</artifactId>
+                  <type>zip</type>
+                  <classifier>docbook</classifier>
+                  <version>${connector.maven.version}</version>
+                  <outputDirectory>${project.build.directory}/classes/connector/maven</outputDirectory>
+                </artifactitem>
+                <artifactitem>
+                  <groupId>org.openengsb.connector</groupId>
+                  <artifactId>org.openengsb.connector.plaintextreport</artifactId>
+                  <type>zip</type>
+                  <classifier>docbook</classifier>
+                  <version>${connector.plaintextreport.version}</version>
+                  <outputDirectory>${project.build.directory}/classes/connector/plaintextreport</outputDirectory>
+                </artifactitem>
+                <artifactitem>
+                  <groupId>org.openengsb.connector</groupId>
+                  <artifactId>org.openengsb.connector.promreport</artifactId>
+                  <type>zip</type>
+                  <classifier>docbook</classifier>
+                  <version>${connector.promreport.version}</version>
+                  <outputDirectory>${project.build.directory}/classes/connector/promreport</outputDirectory>
+                </artifactitem>
+                <artifactitem>
+                  <groupId>org.openengsb.connector</groupId>
+                  <artifactId>org.openengsb.connector.trac</artifactId>
+                  <type>zip</type>
+                  <classifier>docbook</classifier>
+                  <version>${connector.trac.version}</version>
+                  <outputDirectory>${project.build.directory}/classes/connector/trac</outputDirectory>
+                </artifactitem>
               </artifactItems>
             </configuration>
           </execution>
