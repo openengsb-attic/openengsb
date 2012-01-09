@@ -24,7 +24,7 @@
 
   <properties>
     <!-- OpenEngSB Framework Bound Versions -->
-    <openengsb.framework.version>2.4.0-SNAPSHOT</openengsb.framework.version>
+    <openengsb.framework.version>2.4.0</openengsb.framework.version>
     <karaf.version>2.2.5</karaf.version>
     <jai.version>1.1.3</jai.version>
     <docbkx.version>2.0.13</docbkx.version>
