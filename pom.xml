@@ -36,7 +36,7 @@
     <domain.deploy.version>2.0.0-SNAPSHOT</domain.deploy.version>
     <domain.issue.version>2.0.0-SNAPSHOT</domain.issue.version>
     <domain.notification.version>2.0.0-SNAPSHOT</domain.notification.version>
-    <domain.report.version>2.0.0-SNAPSHOT</domain.report.version>
+    <domain.report.version>2.0.0</domain.report.version>
     <domain.scm.version>2.0.0-SNAPSHOT</domain.scm.version>
     <domain.test.version>2.0.0-SNAPSHOT</domain.test.version>
     <connector.email.version>2.0.0-SNAPSHOT</connector.email.version>
