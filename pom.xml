@@ -38,7 +38,7 @@
     <domain.notification.version>2.0.0</domain.notification.version>
     <domain.report.version>2.0.0</domain.report.version>
     <domain.scm.version>2.0.0</domain.scm.version>
-    <domain.test.version>2.0.0-SNAPSHOT</domain.test.version>
+    <domain.test.version>2.0.1</domain.test.version>
     <connector.email.version>2.0.0-SNAPSHOT</connector.email.version>
     <connector.gcalendar.version>2.0.0-SNAPSHOT</connector.gcalendar.version>
     <connector.gcontacts.version>2.0.0-SNAPSHOT</connector.gcontacts.version>
