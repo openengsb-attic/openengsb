@@ -32,7 +32,7 @@
     <!-- Domain Versions -->
     <domain.appointment.version>2.0.0</domain.appointment.version>
     <domain.build.version>2.0.0</domain.build.version>
-    <domain.contact.version>2.0.0-SNAPSHOT</domain.contact.version>
+    <domain.contact.version>2.0.0</domain.contact.version>
     <domain.deploy.version>2.0.0-SNAPSHOT</domain.deploy.version>
     <domain.issue.version>2.0.0-SNAPSHOT</domain.issue.version>
     <domain.notification.version>2.0.0-SNAPSHOT</domain.notification.version>
