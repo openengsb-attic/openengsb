@@ -43,7 +43,7 @@
     <connector.gcalendar.version>2.0.0</connector.gcalendar.version>
     <connector.gcontacts.version>2.0.0</connector.gcontacts.version>
     <connector.git.version>2.0.0</connector.git.version>
-    <connector.github.version>2.0.0-SNAPSHOT</connector.github.version>
+    <connector.github.version>2.0.0</connector.github.version>
     <connector.maven.version>2.0.0-SNAPSHOT</connector.maven.version>
     <connector.plaintextreport.version>2.0.0-SNAPSHOT</connector.plaintextreport.version>
     <connector.promreport.version>2.0.0-SNAPSHOT</connector.promreport.version>
