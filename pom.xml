@@ -88,6 +88,21 @@
     <url>http://github.com/openengsb/openengsb</url>
   </scm>
 
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.jasig.maven</groupId>
+        <artifactId>maven-notice-plugin</artifactId>
+        <configuration>
+          <noticeTemplate>etc/notice/NOTICE.template</noticeTemplate>
+          <licenseMapping>
+            <param>etc/notice/license-mapping.xml</param>
+          </licenseMapping>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+
   <dependencyManagement>
     <dependencies>
       <!-- Reusability of the OpenEngSB Dependency Definitions -->

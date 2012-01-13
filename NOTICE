@@ -1,0 +1,152 @@
+Licensed to the Austrian Association for Software Tool Integration (AASTI)
+under one or more contributor license agreements. See the NOTICE file
+distributed with this work for additional information regarding copyright
+ownership. The AASTI licenses this file to you under the Apache License,
+Version 2.0 (the "License"); you may not use this file except in compliance
+with the License. You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+This project includes:
+  AOP alliance under Public Domain
+  Apache Aries Blueprint Bundle under The Apache Software License, Version 2.0
+  Apache Aries JMX Blueprint Bundle under The Apache Software License, Version 2.0
+  Apache Aries JMX Bundle under The Apache Software License, Version 2.0
+  Apache Aries JNDI API under The Apache Software License, Version 2.0
+  Apache Aries JNDI Core under The Apache Software License, Version 2.0
+  Apache Aries JNDI URL Handler under The Apache Software License, Version 2.0
+  Apache Aries Proxy under The Apache Software License, Version 2.0
+  Apache Aries Proxy Bundle under The Apache Software License, Version 2.0
+  Apache Aries Proxy Implementation under The Apache Software License, Version 2.0
+  Apache Aries Unit Test Support under The Apache Software License, Version 2.0
+  Apache Aries Util under The Apache Software License, Version 2.0
+  Apache Felix Bundle Repository under The Apache Software License, Version 2.0
+  Apache Felix Configuration Admin Service under The Apache Software License, Version 2.0
+  Apache Felix EventAdmin under The Apache Software License, Version 2.0
+  Apache Felix File Install under The Apache Software License, Version 2.0
+  Apache Felix Framework under The Apache Software License, Version 2.0
+  Apache Felix Gogo Runtime under The Apache Software License, Version 2.0
+  Apache Felix Metatype Service under The Apache Software License, Version 2.0
+  Apache Felix Utils under The Apache Software License, Version 2.0
+  Apache Felix Web Management Console under The Apache Software License, Version 2.0
+  Apache Karaf :: Admin :: Command under The Apache Software License, Version 2.0
+  Apache Karaf :: Admin :: Core under The Apache Software License, Version 2.0
+  Apache Karaf :: Admin :: Management under The Apache Software License, Version 2.0
+  Apache Karaf :: Assemblies :: Features :: Enterprise under The Apache Software License, Version 2.0
+  Apache Karaf :: Assemblies :: Features :: Standard under The Apache Software License, Version 2.0
+  Apache Karaf :: Assembly under The Apache Software License, Version 2.0
+  Apache Karaf :: Client under The Apache Software License, Version 2.0
+  Apache Karaf :: Deployer :: Blueprint under The Apache Software License, Version 2.0
+  Apache Karaf :: Deployer :: Features under The Apache Software License, Version 2.0
+  Apache Karaf :: Deployer :: Karaf Archive (.kar) under The Apache Software License, Version 2.0
+  Apache Karaf :: Deployer :: Spring under The Apache Software License, Version 2.0
+  Apache Karaf :: Deployer :: Wrap Non OSGi Jar under The Apache Software License, Version 2.0
+  Apache Karaf :: Diagnostic :: Command under The Apache Software License, Version 2.0
+  Apache Karaf :: Diagnostic :: Common under The Apache Software License, Version 2.0
+  Apache Karaf :: Diagnostic :: Core under The Apache Software License, Version 2.0
+  Apache Karaf :: Diagnostic :: Management under The Apache Software License, Version 2.0
+  Apache Karaf :: Exception under The Apache Software License, Version 2.0
+  Apache Karaf :: Features :: Command under The Apache Software License, Version 2.0
+  Apache Karaf :: Features :: Core under The Apache Software License, Version 2.0
+  Apache Karaf :: Features :: Management under The Apache Software License, Version 2.0
+  Apache Karaf :: Features :: OBR Resolver under The Apache Software License, Version 2.0
+  Apache Karaf :: JAAS :: Boot under The Apache Software License, Version 2.0
+  Apache Karaf :: Jaas :: Command under The Apache Software License, Version 2.0
+  Apache Karaf :: JAAS :: Config under The Apache Software License, Version 2.0
+  Apache Karaf :: JAAS :: Modules under The Apache Software License, Version 2.0
+  Apache Karaf :: Main under The Apache Software License, Version 2.0
+  Apache Karaf :: Management under The Apache Software License, Version 2.0
+  Apache Karaf :: Management :: MBeans :: Config under The Apache Software License, Version 2.0
+  Apache Karaf :: Shell :: ConfigAdmin Commands under The Apache Software License, Version 2.0
+  Apache Karaf :: Shell :: Console under The Apache Software License, Version 2.0
+  Apache Karaf :: Shell :: Development Commands under The Apache Software License, Version 2.0
+  Apache Karaf :: Shell :: Log Commands under The Apache Software License, Version 2.0
+  Apache Karaf :: Shell :: OBR Commands under The Apache Software License, Version 2.0
+  Apache Karaf :: Shell :: OSGi Commands under The Apache Software License, Version 2.0
+  Apache Karaf :: Shell :: PackageAdmin Commands under The Apache Software License, Version 2.0
+  Apache Karaf :: Shell :: SSH under The Apache Software License, Version 2.0
+  Apache Karaf :: Shell :: Various Commands under The Apache Software License, Version 2.0
+  Apache Karaf :: Util under The Apache Software License, Version 2.0
+  Apache Karaf :: Web Console :: Admin Plugin under The Apache Software License, Version 2.0
+  Apache Karaf :: Web Console :: Branding under The Apache Software License, Version 2.0
+  Apache Karaf :: Web Console :: Console under The Apache Software License, Version 2.0
+  Apache Karaf :: Web Console :: Features Plugin under The Apache Software License, Version 2.0
+  Apache Karaf :: Web Console :: Gogo Plugin under The Apache Software License, Version 2.0
+  Apache Log4j under The Apache Software License, Version 2.0
+  Apache MINA Core under Apache 2.0 License
+  Apache Mina SSHD :: Core under Apache 2.0 License
+  Apache ServiceMix :: Bundles :: asm under The Apache Software License, Version 2.0
+  Apache ServiceMix :: Bundles :: mail under The Apache Software License, Version 2.0
+  Commons Codec under The Apache Software License, Version 2.0
+  Commons Collections under The Apache Software License, Version 2.0
+  Commons Compress under The Apache Software License, Version 2.0
+  Commons IO under The Apache Software License, Version 2.0
+  Commons Lang under The Apache Software License, Version 2.0
+  Commons Logging under The Apache Software License, Version 2.0
+  EasyMock under MIT License
+  jansi under The Apache Software License, Version 2.0
+  Jetty :: Continuation under Apache Software License - Version 2.0 or Eclipse Public License - Version 1.0
+  Jetty :: Http Utility under Apache Software License - Version 2.0 or Eclipse Public License - Version 1.0
+  Jetty :: IO Utility under Apache Software License - Version 2.0 or Eclipse Public License - Version 1.0
+  Jetty :: Security under Apache Software License - Version 2.0 or Eclipse Public License - Version 1.0
+  Jetty :: Server Core under Apache Software License - Version 2.0 or Eclipse Public License - Version 1.0
+  Jetty :: Servlet Handling under Apache Software License - Version 2.0 or Eclipse Public License - Version 1.0
+  Jetty :: Utilities under Apache Software License - Version 2.0 or Eclipse Public License - Version 1.0
+  Jetty :: XML utilities under Apache Software License - Version 2.0 or Eclipse Public License - Version 1.0
+  JGit - Core under Eclipse Distribution License (New BSD License)
+  JLine under The BSD License
+  JSch under Revised BSD
+  kXML 2 under The BSD License
+  OpenEngSB :: Assembly under Apache 2
+  OpenEngSB :: Branding :: Shell under Apache 2
+  OpenEngSB :: Connector :: Email under Apache 2
+  OpenEngSB :: Connector :: Gcalendar under Apache 2
+  OpenEngSB :: Connector :: Gcontacts under Apache 2
+  OpenEngSB :: Connector :: Git under Apache 2
+  OpenEngSB :: Connector :: Github under Apache 2
+  OpenEngSB :: Connector :: Maven under Apache 2
+  OpenEngSB :: Connector :: Plain Text Report under Apache 2
+  OpenEngSB :: Connector :: ProM Report under Apache 2
+  OpenEngSB :: Connector :: Trac under Apache 2
+  OpenEngSB :: Domain :: Appointment under Apache 2
+  OpenEngSB :: Domain :: Build under Apache 2
+  OpenEngSB :: Domain :: Contact under Apache 2
+  OpenEngSB :: Domain :: Deploy under Apache 2
+  OpenEngSB :: Domain :: Issue under Apache 2
+  OpenEngSB :: Domain :: Notification under Apache 2
+  OpenEngSB :: Domain :: Report under Apache 2
+  OpenEngSB :: Domain :: Scm under Apache 2
+  OpenEngSB :: Domain :: Test under Apache 2
+  OpenEngSB :: Framework :: Assembly under Apache 2
+  OpenEngSB :: Manual under Apache 2
+  OpenEngSB :: Parent under Apache 2
+  OPS4J Pax Logging - API under ALv2
+  OPS4J Pax Logging - Service under ALv2
+  OPS4J Pax Url - mvn: under ALv2
+  OPS4J Pax Url - wrap: under ALv2
+  org.osgi.compendium under Apache License, Version 2.0
+  org.osgi.core under Apache License, Version 2.0
+  osgi under Apache License, Version 2.0
+  Servlet 2.5 under The Apache Software License, Version 2.0
+  servlet-api under Commons Development and Distribution License, Version 1.0
+  SLF4J API Module under MIT License
+  SLF4J LOG4J-12 Binding under MIT License
+  SLF4J Simple Binding under MIT License
+  Spring OSGi Annotations under Apache License, Version 2.0
+  Spring OSGi Core under Apache License, Version 2.0
+  Spring OSGi Extender under Apache License, Version 2.0
+  Spring OSGi IO under Apache License, Version 2.0
+  spring-aop under Apache License, Version 2.0
+  spring-asm under Apache License, Version 2.0
+  spring-beans under Apache License, Version 2.0
+  spring-context under Apache License, Version 2.0
+  spring-core under Apache License, Version 2.0
+  spring-expression under Apache License, Version 2.0
+  XML Pull Parsing API under Public Domain
+
