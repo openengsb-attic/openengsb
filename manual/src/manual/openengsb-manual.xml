@@ -79,6 +79,7 @@
     <xi:include href="framework/user/howto/howtoDefineModel.xml"/>
     <xi:include href="framework/user/howto/howtoIntegrateServices.xml"/>
     <xi:include href="framework/user/howto/howtoChangeEDBDatabaseBackend.xml"/>
+    <xi:include href="framework/user/howto/howtoTestRemotingWithHermes.xml"/>
   </part>
   <part xml:id="user.connectors">
     <title>Included Domains and Connectors</title>
@@ -95,7 +96,6 @@
     <xi:include href="domain/report/org.openengsb.domain.report.xml" />
     <xi:include href="domain/scm/org.openengsb.domain.scm.xml" />
     <xi:include href="domain/test/org.openengsb.domain.test.xml" />
-
     <xi:include href="connector/email/org.openengsb.connector.email.xml" />
     <xi:include href="connector/gcalendar/org.openengsb.connector.gcalendar.xml" />
     <xi:include href="connector/gcontacts/org.openengsb.connector.gcontacts.xml" />
