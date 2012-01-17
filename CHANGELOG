@@ -1,3 +1,15 @@
+openengsb-2.0.1 2012-01-17
+-----------------------------------------
+
+Bugfix release upgrading openengsb-framework to 2.4.1.
+
+** Library Upgrade
+    * [OPENENGSB-2696] - Upgrade to framework-2.4.1
+
+** Task
+    * [OPENENGSB-2053] - Release openengsb-2.0.1
+
+
 openengsb-2.0.0 2012-01-12
 -----------------------------------------
 
