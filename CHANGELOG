@@ -1,3 +1,39 @@
+openengsb-2.0.2 2012-03-30
+-----------------------------------------
+
+The 2.0.2 release of the OpenEngSB contains various minor bug fixes in it's internal, mostly via the upgrade of
+the OpenEngSB framework. In addition we've upgraded bug-fix releases of CXF and Wicket. None of those fixes should
+have any effect of your experiences with the OpenEngSB.
+
+### Details
+** Library Upgrade
+    * [OPENENGSB-2864] - Upgrade to framework 2.4.3
+    * [OPENENGSB-2865] - Upgrade docbkx version to 2.0.14
+    * [OPENENGSB-2866] - Upgrade root to v32
+
+** Task
+    * [OPENENGSB-2863] - Release openengsb-2.0.2
+
+### Known Issues
+    * [OPENENGSB-1353] Jira Axis connector conflicts with openengsb-ports CXF
+
+
+openengsb-2.0.1 2012-01-17
+-----------------------------------------
+
+Bugfix release upgrading openengsb-framework to 2.4.1. By this upgrade we've fixed the main problem that not
+all artifacts are downloaded in offline mode. OpenEngSB 2.0.1 could be run in offline mode again.
+
+### Details
+** Library Upgrade
+    * [OPENENGSB-2696] - Upgrade to framework-2.4.1
+
+** Task
+    * [OPENENGSB-2053] - Release openengsb-2.0.1
+
+### Known Issues
+    * [OPENENGSB-1353] Jira Axis connector conflicts with openengsb-ports CXF
+
 openengsb-2.0.0 2012-01-12
 -----------------------------------------
 
@@ -77,6 +113,6 @@ All of those connectors and domains had been adapted to the latest version of th
     * [OPENENGSB-2570] - include documentation for connectors and domains in bundle documentation
 
 ### Known Issues
- * [OPENENGSB-1353] Jira Axis connector conflicts with openengsb-ports CXF
+    * [OPENENGSB-1353] Jira Axis connector conflicts with openengsb-ports CXF
 
 
